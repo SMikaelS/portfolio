@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+    <div id="portfolio">
+        <h1 id="title">{{title}}</h1>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000" data-pause="hover">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li v-for="item in portfolioContent" data-target="#myCarousel" v-bind:data-slide-to="item.id"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <h3 class="carousel-title">Introduction</h3>
+                <img src="img/bloglogo.jpg">
+                <div class="carousel-caption">
+              </div>
+              <div class="long-description">
+                A digital marketing specialist with a strong background in creative and professional writing, having studied creative writing extensively and worked as a sports writer for various outlets. With previous experience in the fitness industry, health and wellbeing remains a passion of mine and an area I would like to explore further. However, my creative drive to bring people together through stories remains preeminent in my life, whether it be through marketing, writing, or the two combined.
+              </div>
+          </div>
+          <div class="item" v-for="item in portfolioContent">
+            <h3 class="carousel-title">{{ item.title }}</h3>
+            <img v-html="item.images" v-bind:src="item.images">
+            <div class="carousel-caption">
+          </div>
+          <div class="long-description" v-html="item.longDescription">
+          </div>
+      </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+
+
+</body>
+</html>

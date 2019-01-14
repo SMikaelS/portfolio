@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+body{
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	color: #13151d;
+}
+a {
+	color:#13151d;
+	font-weight: bold;
+	text-decoration: none;
+	font-style: italic;
+}
+.glyphicon-chevron-left:before,.glyphicon-chevron-right:before{content:"";}
+#title{
+	display: block;
+	margin:0;
+	padding: 20px;
+	width: 100%;
+	font-size:50px;
+	text-align: center;
+	box-sizing: border-box;
+  background: #13151d;
+  color: #fff;
+}
+#title:after{
+		border-top: solid 2px #fff;
+    border-bottom: solid 2px #fff;
+    content: "";
+    width: 384px;
+    position: absolute;
+    height: 62px;
+    left: 50%;
+    transform: translate(-50%);
+}
+#list{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+#list > li{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	padding-top: 20px;
+}
+
+#list > li .sub-title{
+	font-size: 30px;
+	font-weight: bold;
+	color:#13151d;
+	text-align:center;
+	padding:10px;
+}
+
+#list > li .images{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	width: 100%;
+}
+#list > li .images > img{
+	width: 100%;
+	max-width: 800px;
+}
+#list > li:nth-child(2n){
+	background: #c1c1c1bf;
+} 
+#list > li:nth-child(2n + 1){
+	background: #dedede82;
+}
+
+#portfolio .carousel-inner .item{
+	min-height: 500px;
+}
+ #portfolio .carousel-inner .item .carousel-title{
+	text-align: center;
+	font-weight: bold;
+	font-size:40px;
+}
+#portfolio .carousel-inner .item .carousel-caption{
+	position: initial;
+	padding:0;
+	margin-bottom:10px;
+}
+#portfolio .carousel-inner .item .carousel-caption span{
+	padding:0;
+	color:#000;
+	font-weight: 	bold;
+	font-size:20px;
+}
+#portfolio .carousel-inner > .item >img[src="img/rs-logo-header.png"],#portfolio .carousel-inner > .item >img[src="img/bloglogo.png"] {
+	height:auto;
+	margin: 70px auto;
+}
+#portfolio .carousel-inner > .item >img{
+	margin: auto;
+	max-height: 300px;
+	height:300px;
+}
+#portfolio .item .long-description{
+	font-size: 20px;
+	text-align:center;
+	color:#13151d;
+	line-height: 40px;
+	padding:40px;
+	background: #c2c2c2;
+	    min-height: 250px;
+
+}
+#portfolio .item .long-description > img{	
+    max-width: 100%;
+    width:800px;
+    display: block;
+    margin: 40px auto;
+}
+#portfolio .carousel-indicators {bottom: 5px;}
+#portfolio .carousel-indicators li{width:20px;height:20px;}
+#portfolio .carousel-indicators li.active{width:22px;height:22px;}
